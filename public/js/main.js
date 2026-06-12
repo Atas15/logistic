@@ -79,10 +79,6 @@
                 }
             }
         }
-
-        if (typeof markDatabaseShipments === "function") {
-            markDatabaseShipments();
-        }
     };
     
     Calendar.prototype.clickDay = function(o) {

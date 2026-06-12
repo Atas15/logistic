@@ -15,7 +15,7 @@ class LocaleMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (session()->has('locale') and in_array(session('locale'), ['en', 'ru'])) {
+        if (session()->has('locale') and in_array(session('locale'), ['en', 'ru', 'tk', 'tr', 'fa', 'ar'])) {
             app()->setLocale(session('locale'));
         } else {
             app()->setLocale(env('APP_LOCALE', 'en'));

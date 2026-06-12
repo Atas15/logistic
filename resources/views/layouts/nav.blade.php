@@ -18,6 +18,9 @@
     padding: 6px;
     margin: 0;
     z-index: 99999;
+    max-height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .language-dropdown.show {
@@ -79,24 +82,48 @@
         <li><a href="/pricing">Pricing</a></li>
         <li><a href="#location">Our Locations</a></li>
         <li class="language-menu">
-    <a href="#" id="languageBtn">
-        🌐
-    </a>
-
-    <ul class="language-dropdown" id="languageDropdown">
-        <li>
-            <a href="{{ route('locale', 'en') }}">
-                <img src="https://flagcdn.com/w40/gb.png" alt="English">
+            <a href="#" id="languageBtn">
+                🌐
             </a>
+        
+            <ul class="language-dropdown" id="languageDropdown">
+                <li>
+                    <a href="{{ route('locale', 'en') }}">
+                        <img src="https://flagcdn.com/w40/gb.png" alt="English">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="{{ route('locale', 'ru') }}">
+                        <img src="https://flagcdn.com/w40/ru.png" alt="Русский">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="{{ route('locale', 'tk') }}">
+                        <img src="https://flagcdn.com/w40/tm.png" alt="Türkmençe">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="{{ route('locale', 'tr') }}">
+                        <img src="https://flagcdn.com/w40/tr.png" alt="Türkçe">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="{{ route('locale', 'fa') }}">
+                        <img src="https://flagcdn.com/w40/ir.png" alt="Farsi">
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="{{ route('locale', 'ar') }}">
+                        <img src="https://flagcdn.com/w40/sa.png" alt="العربية">
+                    </a>
+                </li>
+            </ul>
         </li>
-
-        <li>
-            <a href="{{ route('locale', 'ru') }}">
-                <img src="https://flagcdn.com/w40/ru.png" alt="Русский">
-            </a>
-        </li>
-    </ul>
-</li>
         
         {{-- Giriş yapmış adminler için Çıkış Yap butonu --}}
         @auth
